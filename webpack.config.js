@@ -10,6 +10,8 @@ const cssPlugin = new MiniCssExtractPlugin({
     filename: "./bundle.css"
 })
 
+const devMode = process.env.NODE_ENV !== "production";
+
 module.exports = {
     module: {
         rules: [
