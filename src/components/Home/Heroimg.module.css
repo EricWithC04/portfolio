@@ -89,3 +89,13 @@
     color: #fff;
     transition: 0.3s;
 }
+
+@media screen and (max-width: 640px) {
+    .hero .content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero .content p {
+        font-size: 1.4rem;
+    }
+}

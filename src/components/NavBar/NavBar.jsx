@@ -6,11 +6,22 @@ import styles from "./NavBar.module.css";
 const NavBar = () => {
 
     const [click, setClick] = useState(false);
+    const [color, setColor] = useState(false);
+
+    const changeColor = () => {
+        if(window.scrollY >= 100) {
+            setColor(true)
+        } else {
+            setColor(false)
+        }
+    }
 
     const handleClick = () => setClick(!click);
 
+    window.addEventListener("scroll", changeColor)
+
     return (
-        <div className={styles.header}>
+        <div className={color ? styles.headerBg : styles.header}>
             <Link to="/">
                 <h1>Portfolio</h1>
             </Link>
